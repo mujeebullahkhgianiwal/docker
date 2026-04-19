@@ -6,8 +6,6 @@ services:
     container_name: php_apache
     ports:
       - "8080:80"
-    volumes:
-      - C:/docker2/volum:/var/www/html
     depends_on:
       - db
 
@@ -20,8 +18,3 @@ services:
       MYSQL_DATABASE: test_db
     ports:
       - "3307:3306"
-    volumes:
-      - db_data:/var/lib/mysql
-
-volumes:
-  db_data:
